@@ -5,25 +5,18 @@ namespace Tyuiu.AntonovVV.Sprint6.Task3.V1.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            int[] column = new int[5];
-
-            for (int i = 0; i <= 4; i++)
+            int[] firstRow = new int[5];
+            for (int i = 0; i < firstRow.Length; i++)
             {
-                column[i] = matrix[i, 1];
+                firstRow[i] = matrix[i, 2];
             }
-
-            Array.Sort(column);
-
-            for (int i = 0; i <= 4; i++)
+            Array.Sort(firstRow);
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                matrix[i, 1] = column[i];
+                matrix[i, 2] = firstRow[i];
             }
-
             return matrix;
         }
     }
 }
-        
-        
-    
-        
+
