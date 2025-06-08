@@ -8,12 +8,12 @@ namespace Tyuiu.AntonovVV.Sprint6.Task3.V1.Lib
             int[] firstRow = new int[5];
             for (int i = 0; i < firstRow.Length; i++)
             {
-                firstRow[i] = matrix[i, 2];
+                firstRow[i] = matrix[i, 0];
             }
             Array.Sort(firstRow);
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                matrix[i, 2] = firstRow[i];
+                matrix[i, 0] = firstRow[i];
             }
             return matrix;
         }
